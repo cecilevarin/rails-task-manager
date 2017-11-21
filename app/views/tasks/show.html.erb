@@ -1,7 +1,9 @@
-<h1> <% if @task.is_done %>
+<h2> <% if @task.is_done %>
   [X]
   <% else %>
   [ ]
   <% end %>
   : <%=@task.description %>
-</h1>
+  : créé le <%= @task.created_at.strftime('%a %d %b %Y') %>
+</h2>
+<%= link_to "Retour à l'index", tasks_path %>
